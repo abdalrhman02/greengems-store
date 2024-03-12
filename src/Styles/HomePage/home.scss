@@ -1,0 +1,111 @@
+
+.landing {
+    background-image: url('../../Images/landBackground.jpg');
+    background-size: cover;
+
+    .container {
+        position: relative;
+        height: 47em;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .landingContent {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFF;
+            text-align: center;
+
+            h2 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 23px;
+                margin: 15px 0;
+            }
+
+            button {
+                width: 8em;
+                height: 2.4em;
+                font-size: 18px;
+
+                &:hover {
+                    opacity: .9;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+.productsSection {
+    padding: 4em 0;
+
+    .container {
+
+        .products {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5em;
+        }
+
+        .moreProductsBtn {
+            width: 9em;
+            height: 3.3em;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 3em;
+        }
+    }
+}
+
+
+.aboutus {
+    padding: 4em 0;   
+    margin-top: 12em; 
+    .container {
+        .text {
+            color: #fff;
+            background-color: #212121;
+            padding: 70px 25px;
+            border-radius: 20px;
+            position: relative; // For the picture
+
+            h3 {
+                font-size: 27px
+            }
+
+            h4 {
+                color: var(--f-color);
+                margin: 8px 0 17px;
+                font-size: 20px;
+            }
+
+            p {
+                max-width: 800px;
+                line-height: 1.8em;
+                font-size: 18px
+            }
+
+            img {
+                position: absolute;
+                top: -115px;
+                right: 6em;
+                width: 18em;
+            }
+        }
+    }
+}

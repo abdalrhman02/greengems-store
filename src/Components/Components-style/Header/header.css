@@ -1,0 +1,85 @@
+header {
+  background-color: var(--f-color);
+  color: #FFF;
+  height: 75px;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+header .container .left {
+  display: flex;
+  align-items: center;
+}
+header .container .left .logo {
+  margin-right: 1em;
+}
+header .container .left .logo img {
+  width: 8em;
+}
+header .container .left ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+header .container .left ul li {
+  color: #FFF;
+}
+header .container .right {
+  display: flex;
+  align-items: center;
+}
+header .container .right .changeLang {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 20px;
+  background-color: #FFF;
+  padding: 2px 5px;
+  border-radius: 5px;
+  position: relative;
+}
+header .container .right .changeLang .downArrow-icon {
+  width: 1.5em;
+}
+header .container .right .changeLang .global-icon {
+  width: 1.2em;
+}
+header .container .right .changeLang .langs {
+  flex-direction: column;
+  position: absolute;
+  left: -20px;
+  top: 35px;
+  background-color: #FFF;
+  width: 6em;
+  border: 2px solid var(--s-color);
+  border-radius: 4px;
+  z-index: 2;
+}
+header .container .right .changeLang .langs button {
+  height: 35px;
+  border: none;
+  background-color: #FFF;
+  font-weight: 600;
+}
+header .container .right .changeLang .langs button:hover {
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+header .container .right .shopping-cart {
+  margin: 0 15px;
+}
+header .container .right .shopping-cart .shopping-cart-img {
+  width: 30px;
+  padding-top: 8px;
+}
+header .container .right .btn {
+  background-color: var(--t-color);
+  width: 6em;
+  height: 2.5em;
+}
+header .container .right .btn:hover {
+  background-color: var(--t-color);
+}/*# sourceMappingURL=header.css.map */

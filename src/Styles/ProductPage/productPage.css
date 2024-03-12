@@ -1,0 +1,69 @@
+.productPage .productContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em 0em;
+}
+.productPage .productContainer .productImage {
+  margin-right: 1em;
+}
+.productPage .productContainer .productImage img {
+  width: 32em;
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+.productPage .productContainer .productInfo {
+  color: #fff;
+  align-self: baseline;
+}
+.productPage .productContainer .productInfo .prName {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 10px;
+  font-size: 38px;
+}
+.productPage .productContainer .productInfo .prName::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 35%;
+  height: 4px;
+  background-color: var(--f-color);
+}
+.productPage .productContainer .productInfo .prType {
+  font-size: 18px;
+}
+.productPage .productContainer .productInfo .prPrice {
+  margin: 20px 0;
+  background-color: var(--f-color);
+  padding: 7px 7px;
+  width: 2.2em;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.productPage .productContainer .productInfo .prDesc {
+  max-width: 600px;
+  line-height: 1.6em;
+}
+.productPage .productContainer .productInfo button {
+  width: 15em;
+  height: 2em;
+  font-size: 18px;
+  margin-top: 1em;
+}
+.productPage .more {
+  color: #fff;
+}
+.productPage .more ul {
+  list-style-type: disc;
+  max-width: 1200px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+.productPage .more ul li {
+  margin-top: 10px;
+}/*# sourceMappingURL=productPage.css.map */

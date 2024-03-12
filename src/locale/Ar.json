@@ -1,0 +1,46 @@
+{
+    "headerLink1": "الصفحة الرئيسية",
+    "headerLink2": "المتجر",
+    "headerLink3": "التواصل",
+    "headerLink4": "زبائننا",
+
+    "landingTitle": "اعد ذكرياتك الالعاب القديمة!",
+    "landingDesc": "استمتع بلحظات جميلة من زمن الالعاب القديمة مع جميع اجهزة الالعاب القديمة",
+    "landingBtn": "المتجر",
+
+    "productCardName1": "Game Stick Lite",
+    "productCardFirstFeature1": "9 اجهزة العاب في جهاز واحد",
+    "productCardSecondFeature1": "+10,000 لعبة" ,
+    "productCardThirdFeature1": "وحدتين تحكم" ,
+
+    "productCardName2": "Game Boy Sup",
+    "productCardFirstFeature2": "صغير و يتسع في جيبك",
+    "productCardSecondFeature2": "+300 لعبة" ,
+    "productCardThirdFeature2": "بديل لاستخدام الهاتف" ,
+
+    "productCardName3": "Mini Game Box",
+    "productCardFirstFeature3": "افضل الالعاب القديمة",
+    "productCardSecondFeature3": "+620 لعبة" ,
+    "productCardThirdFeature3": "شيء ما هنا :>" ,
+
+    "productCardBtn": "المزيد",
+    "moreProductBtn": "المزيد من المنتجات",
+
+
+    "aboutusTitle": "عن المتجر",
+    "aboutusPara1": "نقدم لكم مجموعة من أجهزة الألعاب القديمة ذات الطراز الحديث مع آلاف الألعاب الممتعة والمناسبة لجميع الأجيال من الأطفال إلى الكبار ونهدف دائمًا إلى تطوير المتجر بشكل أكبر وإضافة منتجات جديدة دائمًا بمختلف الأشكال والاستخدامات.",
+    "aboutusPara2": "لا تتردد في الاتصال بنا لأي سبب من الأسباب!",
+
+
+
+    "signup": "انشاء حساب",
+    "register": "انشئ حسابك الان و استمتع مع افضل اجهزة الالعاب",
+    "usernameInput": "اسم المستخدم",
+    "passwordInput": "كلمة المرور",
+    "emailInput": "الايميل",
+    "repeatEmailInput": "الايميل مره اخرى",
+    "hasAnAccount": "لديك حساب بالفعل ؟",
+    "dontHasAnAccount": "تريد انشاء حساب جديد؟",
+    
+    "login": "تسجيل دخول"
+}

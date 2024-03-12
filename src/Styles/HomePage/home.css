@@ -1,0 +1,90 @@
+.landing {
+  background-image: url("../../Images/landBackground.jpg");
+  background-size: cover;
+}
+.landing .container {
+  position: relative;
+  height: 47em;
+}
+.landing .container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.landing .container .landingContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFF;
+  text-align: center;
+}
+.landing .container .landingContent h2 {
+  font-size: 3em;
+}
+.landing .container .landingContent p {
+  font-size: 23px;
+  margin: 15px 0;
+}
+.landing .container .landingContent button {
+  width: 8em;
+  height: 2.4em;
+  font-size: 18px;
+}
+.landing .container .landingContent button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.productsSection {
+  padding: 4em 0;
+}
+.productsSection .container .products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+}
+.productsSection .container .moreProductsBtn {
+  width: 9em;
+  height: 3.3em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3em;
+}
+
+.aboutus {
+  padding: 4em 0;
+  margin-top: 12em;
+}
+.aboutus .container .text {
+  color: #fff;
+  background-color: #212121;
+  padding: 70px 25px;
+  border-radius: 20px;
+  position: relative;
+}
+.aboutus .container .text h3 {
+  font-size: 27px;
+}
+.aboutus .container .text h4 {
+  color: var(--f-color);
+  margin: 8px 0 17px;
+  font-size: 20px;
+}
+.aboutus .container .text p {
+  max-width: 800px;
+  line-height: 1.8em;
+  font-size: 18px;
+}
+.aboutus .container .text img {
+  position: absolute;
+  top: -115px;
+  right: 6em;
+  width: 18em;
+}/*# sourceMappingURL=home.css.map */

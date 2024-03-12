@@ -1,0 +1,45 @@
+{
+    "headerLink1": "Home",
+    "headerLink2": "Store",
+    "headerLink3": "Contact",
+    "headerLink4": "Buyers",
+
+    "landingTitle": "Bring back your memories of old games!",
+    "landingDesc": "Enjoy beautiful moments from the time of retro games with all retro gaming devices",
+    "landingBtn": "Store",
+
+    "productCardName1": "Game Stick Lite",
+    "productCardFirstFeature1": "9 Retro Devices in 1",
+    "productCardSecondFeature1": "+10,000 Game" ,
+    "productCardThirdFeature1": "2 Controllers" ,
+
+    "productCardName2": "Game Boy Sup",
+    "productCardFirstFeature2": "Small and fit your pocket",
+    "productCardSecondFeature2": "+300 Game" ,
+    "productCardThirdFeature2": "Phone alternative" ,
+
+    "productCardName3": "Mini Game Box",
+    "productCardFirstFeature3": "Good Retro Games",
+    "productCardSecondFeature3": "+620 Game" ,
+    "productCardThirdFeature3": "Something Here :>" ,
+
+    "productCardBtn": "More",
+    "moreProductBtn": "More Products",
+
+    "aboutusTitle": "About us",
+    "aboutusPara1": "We offer you a collection of old gaming devices in a modern style with thousands of fun games suitable for all generastions, from children to adults and We always aim to develop the store further and always add new products in various shapes and uses.",
+    "aboutusPara2": "Do not hesitate to contact us for any reason!",
+
+
+
+    "signup": "Signup",
+    "register": "Register and enjoy with the best gaming devices",
+    "usernameInput": "Username",
+    "passwordInput": "Password",
+    "emailInput": "Email",
+    "repeatEmailInput": "Repeat Email Again",
+    "hasAnAccount": "Already has an account?",
+    "dontHasAnAccount": "Want create new account?",
+    
+    "login": "Login"
+}

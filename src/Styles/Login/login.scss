@@ -1,0 +1,82 @@
+
+.signup, .login {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    .container {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 55%;
+        height: 62%
+    }
+
+    .left {
+        position: relative;
+        width: 50%;
+        background-color: var(--f-color);
+
+        img {
+            width: 22em;
+            position: absolute;
+            left:50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }   
+
+    .right {
+        position: relative;
+        width: 55%;
+        background-color: #FFF;
+        padding: 1.8em 3em;
+
+        h2 {
+            font-size: 2.2em;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        form {
+
+            div {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1em;
+                label {
+                    margin-bottom: 3px
+                }
+                input {
+                    height: 2.7em;
+                    padding-left: 6px;
+                    border: 1px solid #333333;
+                    border-radius: 4px;
+                    outline: none;
+
+                    &:focus {
+                        border: 1px solid var(--f-color);
+                    }
+                }
+            }
+
+            button {
+                width: 7em;
+                height: 2.2em;
+                margin-top: 20px;
+            }
+
+            .signin-link {
+
+                a {
+                    color: rgb(9, 144, 255);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

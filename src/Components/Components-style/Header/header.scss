@@ -1,0 +1,104 @@
+
+header {
+    background-color: var(--f-color);
+    color: #FFF;
+    height: 75px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                margin-right: 1em;
+                img {
+                    width: 8em
+                }
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 1.5em;
+                
+                li {
+                    color: #FFF
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+
+            .changeLang {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin-left: 20px;
+                background-color: #FFF;
+                padding: 2px 5px;
+                border-radius: 5px;
+                position: relative;
+
+                .downArrow-icon {
+                    width: 1.5em;
+                }
+                .global-icon {
+                    width: 1.2em
+                }
+
+
+                .langs {
+                    flex-direction: column;
+                    position: absolute;
+                    left: -20px;
+                    top: 35px;
+                    background-color: #FFF;
+                    width: 6em;
+                    border: 2px solid var(--s-color);
+                    border-radius: 4px;
+                    z-index:2; // To come over the landing shadow :>
+
+                    button {
+                        height: 35px;
+                        border: none;
+                        background-color: #FFF;
+                        font-weight: 600;
+
+                        &:hover {
+                            background-color: #eeeeee;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .shopping-cart {
+                margin: 0 15px;
+
+                .shopping-cart-img {
+                    width: 30px;
+                    padding-top: 8px
+                }
+            }
+
+            .btn {
+                background-color: var(--t-color);
+                width: 6em;
+                height: 2.5em;
+
+                &:hover {
+                    background-color: var(--t-color);
+                }
+            }
+        }
+
+
+    }
+}

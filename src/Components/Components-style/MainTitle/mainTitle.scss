@@ -1,0 +1,28 @@
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin: 3em 0;
+    
+    h2 {
+        color: #FFF;
+        position: relative;
+        
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--f-color);
+            width: 0.9em;
+            height: 0.9em;
+            border-radius: 50%
+        }
+        &::before {
+            left: -35px;
+        }
+        &::after {
+            right: -35px;
+        }
+    }
+}

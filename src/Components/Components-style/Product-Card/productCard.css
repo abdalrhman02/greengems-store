@@ -1,0 +1,41 @@
+.productCard {
+  background-color: var(--s-color);
+  width: 21em;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 15px;
+}
+.productCard .productName {
+  color: #FFF;
+  text-align: center;
+  padding: 9px 0;
+}
+.productCard .productImg {
+  width: 21em;
+  margin-bottom: -4px;
+}
+.productCard .productInfo {
+  height: 8em;
+  background-color: #FFF;
+  border-radius: 0 0 15px 15px;
+  padding: 0px 15px 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.productCard .productInfo ul {
+  margin-top: 10px;
+}
+.productCard .productInfo ul li {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+.productCard .productInfo ul li i {
+  color: red;
+  margin-right: 6px;
+}
+.productCard .productInfo button {
+  width: 6em;
+  height: 2.2em;
+  font-size: 14px;
+}/*# sourceMappingURL=productCard.css.map */

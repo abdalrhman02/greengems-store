@@ -1,0 +1,25 @@
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 3em 0;
+}
+.title h2 {
+  color: #FFF;
+  position: relative;
+}
+.title h2::before, .title h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--f-color);
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 50%;
+}
+.title h2::before {
+  left: -35px;
+}
+.title h2::after {
+  right: -35px;
+}/*# sourceMappingURL=mainTitle.css.map */

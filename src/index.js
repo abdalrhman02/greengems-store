@@ -1,17 +1,51 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { app } from './firebaseConfig';
+
+// Translation Framework
+import './i18n';
+
+// Pages Files
+import Home from './Pages/Home';
+import Store from './Pages/Store';
+import ProductPage from './Pages/ProductPage';
+import Signup from './Pages/Signup';
+import Login from './Pages/Login';
+
+// Styles Files
+import './Styles/all.min.css'
+import './Styles/Global-Rules/global-rules.css';
+import './Styles/HomePage/home.css';
+import './Styles/Store/store.css';
+import './Styles/ProductPage/productPage.css'
+import './Styles/Login/login.css'
+
+// Components Styles Files
+import './Components/Components-style/Header/header.css';
+import './Components/Components-style/Footer/footer.css';
+import './Components/Components-style/Product-Card/productCard.css';
+import './Components/Components-style/MainTitle/mainTitle.css';
+
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  { path: "/", element: <Home />, },
+  { path: "Store", element: <Store />, },
+  { path: "product/:id", element: <ProductPage /> },
+  { path: "Signup", element: <Signup /> },
+  { path: "Login", element: <Login /> },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
