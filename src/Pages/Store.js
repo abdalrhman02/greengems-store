@@ -103,7 +103,7 @@ function Home() {
               {/* <p>{product.type}</p> */}
               <h2 className='productPrice'>{product.price}$</h2>
               <div className='buttons'>
-                <button className='btn deleteBtn' onClick={() => {deleteProduct(product.id)}}>Delete This Product</button>
+                <button className='btn' onClick={() => {deleteProduct(product.id)}}>Delete This Product</button>
                 <Link to={`/product/${product.id}`}><button className='btn'>Buy It</button></Link>
               </div>
             </div>
