@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
@@ -82,7 +82,20 @@ function Home() {
     const productDoc = doc(db, 'products', id);
     await deleteDoc(productDoc);
     getProductsList()
-  }
+  };
+
+
+  // const fs = require('fs');
+  const prNameInp = useRef()
+  // // Function to update the JSON file with the input value
+  // function updateJsonFile(value) {
+  //     const data = { productName: value };
+
+  //     // Write data to JSON file
+  //     fs.writeFileSync('en.json', JSON.stringify(data, null, 2));
+  // }
+
+  console.log(prNameInp.current)
 
   return (
     <>
@@ -117,7 +130,7 @@ function Home() {
           <div className='productDetails'>
             <div>
               <label>Name:</label>
-              <input type='text' placeholder='Product Name' onChange={(e) => setNewProductName(e.target.value)} />
+              <input type='text' placeholder='Product Name' ref={prNameInp} onChange={(e) => setNewProductName(e.target.value)} />
             </div>
 
             <div>

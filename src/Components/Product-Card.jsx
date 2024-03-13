@@ -32,8 +32,6 @@ function ProductCard({
                         {productCardThirdFeature}
                     </li>
                 </ul>
-
-                <a href="#"><button className='btn'>{productCardBtn}</button></a>
             </div>    
         </div>
     )
