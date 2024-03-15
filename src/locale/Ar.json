@@ -1,4 +1,28 @@
 {
+    "signup": "انشاء حساب",
+    "register": "انشئ حسابك الان و استمتع مع افضل اجهزة الالعاب",
+    "usernameInput": "اسم المستخدم",
+    "passwordInput": "كلمة المرور",
+    "emailInput": "الايميل",
+    "repeatEmailInput": "الايميل مره اخرى",
+    "hasAnAccount": "لديك حساب بالفعل ؟",
+    "dontHasAnAccount": "تريد انشاء حساب جديد؟",
+    "login": "تسجيل دخول",
+
+    "APHeader": "هذه الصفحة للمسؤول عن المتجر ليضيف عليه المنتجات",
+    "APAddProduct": "اضف منتج جديد :",
+    "APinpName": "الاسم:",
+    "APinpNameHolder": "اسم المنتج",
+    "APinpDescription": "الوصف:",
+    "APinpDescriptionHolder": "وصف المنتج",
+    "APinpPrice": "السعر:",
+    "APinpPriceHolder": "سعر المنتج",
+    "APinpType": "النوع:",
+    "APinpTypeHolder": "نوع المنتج",
+    "APinpFeature": "الميزة رقم",
+    "APinpFeatureHolder": "ميزة المنتج",
+
+
     "headerLink1": "الصفحة الرئيسية",
     "headerLink2": "المتجر",
     "headerLink3": "التواصل",
@@ -32,15 +56,7 @@
     "aboutusPara2": "لا تتردد في الاتصال بنا لأي سبب من الأسباب!",
 
 
+    "storeTitle": "قائمة منتجاتنا",
+    "buyersTitle": "زبائننا"
 
-    "signup": "انشاء حساب",
-    "register": "انشئ حسابك الان و استمتع مع افضل اجهزة الالعاب",
-    "usernameInput": "اسم المستخدم",
-    "passwordInput": "كلمة المرور",
-    "emailInput": "الايميل",
-    "repeatEmailInput": "الايميل مره اخرى",
-    "hasAnAccount": "لديك حساب بالفعل ؟",
-    "dontHasAnAccount": "تريد انشاء حساب جديد؟",
-    
-    "login": "تسجيل دخول"
 }

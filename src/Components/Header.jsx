@@ -19,11 +19,11 @@ function Header() {
     const { t, i18n } = useTranslation();
     const changeEN = () => {
         i18n.changeLanguage("en");
-        body.style.cssText = "font-family: Retro Gaming";
+        body.style.cssText = "font-family: 'Retro Gaming'";
     }
     const changeAR = () => {
         i18n.changeLanguage("ar");
-        body.style.cssText = "font-family: Arabic Pixel 2";
+        body.style.cssText = "font-family: 'Alexandria'";
     }
 
     return (
@@ -38,7 +38,7 @@ function Header() {
                         <a href="/"><li>{t("headerLink1")}</li></a>
                         <a href="Store"><li>{t("headerLink2")}</li></a>
                         <a href="#"><li>{t("headerLink3")}</li></a>
-                        <a href="#"><li>{t("headerLink4")}</li></a>
+                        <a href="Buyers"><li>{t("headerLink4")}</li></a>
                     </ul>
                 </div>
 
@@ -54,7 +54,7 @@ function Header() {
                     </div>
 
                     <a href="#" className='shopping-cart'><img className='shopping-cart-img' src={require('../Images/Icons/shopping-cart.png')} /></a>
-                    <a href="Signup"><button className='btn'>Login</button></a>
+                    <a href="Signup"><button className='btn'>{t('login')}</button></a>
                 </div>
 
             </div>

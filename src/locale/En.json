@@ -1,4 +1,28 @@
 {
+    "signup": "Signup",
+    "register": "Register and enjoy with the best gaming devices",
+    "usernameInput": "Username",
+    "passwordInput": "Password",
+    "emailInput": "Email",
+    "repeatEmailInput": "Repeat Email Again",
+    "hasAnAccount": "Already has an account?",
+    "dontHasAnAccount": "Want create new account?",
+    "login": "Login",
+
+    "APHeader": "This Page for admin to add product.",
+    "APAddProduct": "Add New Product",
+    "APinpName": "Name:",
+    "APinpNameHolder": "Product Name",
+    "APinpDescription": "Description:",
+    "APinpDescriptionHolder": "Product Description",
+    "APinpPrice": "Price:",
+    "APinpPriceHolder": "Product Price",
+    "APinpType": "Type:",
+    "APinpTypeHolder": "Product Type",
+    "APinpFeature": "Feature:",
+    "APinpFeatureHolder": "Product Feature",
+    
+
     "headerLink1": "Home",
     "headerLink2": "Store",
     "headerLink3": "Contact",
@@ -31,15 +55,6 @@
     "aboutusPara2": "Do not hesitate to contact us for any reason!",
 
 
-
-    "signup": "Signup",
-    "register": "Register and enjoy with the best gaming devices",
-    "usernameInput": "Username",
-    "passwordInput": "Password",
-    "emailInput": "Email",
-    "repeatEmailInput": "Repeat Email Again",
-    "hasAnAccount": "Already has an account?",
-    "dontHasAnAccount": "Want create new account?",
-    
-    "login": "Login"
+    "storeTitle": "Our Products",
+    "buyersTitle": "Our Customers"
 }

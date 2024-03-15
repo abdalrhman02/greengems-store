@@ -30,7 +30,7 @@ function Home() {
           <div className='products'>
             <ProductCard 
               productCardName={t("productCardName1")}
-              productImage={require('../Images/p1.jpeg')}
+              productImage={require('../Images/Products/p1.jpeg')}
               productCardFirstFeature={t("productCardFirstFeature1")}
               productCardSecondFeature={t("productCardSecondFeature1")}
               productCardThirdFeature={t("productCardThirdFeature1")}
@@ -38,7 +38,7 @@ function Home() {
 
             <ProductCard 
               productCardName={t("productCardName2")}
-              productImage={require('../Images/p2.jpeg')}
+              productImage={require('../Images/Products/p2.jpeg')}
               productCardFirstFeature={t("productCardFirstFeature2")}
               productCardSecondFeature={t("productCardSecondFeature2")}
               productCardThirdFeature={t("productCardThirdFeature2")}
@@ -46,7 +46,7 @@ function Home() {
 
             <ProductCard 
               productCardName={t("productCardName3")}
-              productImage={require('../Images/p3.png')}
+              productImage={require('../Images/Products/p3.png')}
               productCardFirstFeature={t("productCardFirstFeature3")}
               productCardSecondFeature={t("productCardSecondFeature3")}
               productCardThirdFeature={t("productCardThirdFeature3")}

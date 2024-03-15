@@ -1,8 +1,8 @@
 
-function MainTitle() {
+function MainTitle({theTitle}) {
     return(
         <div className="title">
-            <h2>Our Products</h2>
+            <h2>{theTitle}</h2>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-* {margin:0; padding:0; font-family: 'Retro Gaming';}
+* {margin:0; padding:0; }
 
 :root {
     --f-color: #00b45d;
@@ -6,7 +6,7 @@
     --t-color: #03743c;
 }
 
-body {background-color: var(--t-color);}
+body {background-color: var(--t-color); font-family: 'Retro Gaming'; }
 ul {list-style-type: none;}
 a {text-decoration: none; color: #000;}
 
@@ -35,10 +35,27 @@ a {text-decoration: none; color: #000;}
 
 @font-face {
     font-family: 'Retro Gaming';
-    src: url('../../Fonts//Retro\ Gaming.ttf'),
-         url('../../Fonts/Arabic\ Pixel\ 2.ttf')
+    src: url('../../Fonts/Retro\ Gaming.ttf')
 }
-// @font-face {
-//     font-family: 'Arabic Pixel 2';
-//     src: url('../../Fonts/Arabic\ Pixel\ 2.ttf')
-// }
+@font-face {
+    font-family: 'Alexandria';
+    src: url('../../Fonts/Alexandria.ttf')
+}
+
+
+
+/* Admin Page */
+
+.adminPage {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        margin-bottom: 4em;
+    
+        img {
+            width: 7em
+        }
+    }
+}

@@ -9,9 +9,11 @@ import './i18n';
 // Pages Files
 import Home from './Pages/Home';
 import Store from './Pages/Store';
+import Buyers from './Pages/Buyers';
 import ProductPage from './Pages/ProductPage';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
+import AdminPage from './Pages/AdminPage';
 
 // Styles Files
 import './Styles/all.min.css'
@@ -36,9 +38,11 @@ import {
 const router = createBrowserRouter([
   { path: "/", element: <Home />, },
   { path: "Store", element: <Store />, },
+  { path: "Buyers", element: <Buyers /> },
   { path: "product/:id", element: <ProductPage /> },
   { path: "Signup", element: <Signup /> },
   { path: "Login", element: <Login /> },
+  { path: "AdminPage", element: <AdminPage /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

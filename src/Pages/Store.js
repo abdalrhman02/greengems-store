@@ -39,69 +39,12 @@ function Home() {
   const [newProductFeature2, setNewProductFeature2] = useState('');
   const [newProductFeature3, setNewProductFeature3] = useState('');
 
-  // Add Product
-  const addProduct = async () => {
-    const newProductRef = await addDoc(productsCollection, {
-      name: newProductName,
-      price: newProductPrice, 
-      description: newProductDesc,
-      type: newProductType,
-      feature1: newProductFeature1,
-      feature2: newProductFeature2,
-      feature3: newProductFeature3,
-    });
-    
-    console.log(newProductRef)
-  
-    // Upload image for the newly added product
-    uploadImage(newProductRef.id);
-    getProductsList();
-  };
-  
-  const [imageUpload, setImageUpload] = useState(null); 
-  const uploadImage = async (productId) => {
-    if (!imageUpload) return;
-
-    const storageRef = ref(getStorage(), `images/${productId}_${imageUpload.name}`);
-    await uploadBytes(storageRef, imageUpload);
-
-    // Get download URL and update product in Firestore
-    const imageUrl = await getDownloadURL(storageRef);
-    const productDoc = doc(db, 'products', productId);
-    await updateDoc(productDoc, { imageUrl });
-  };
-
-  const updateProductImage = async (productId, imageUrl) => {
-    const productDoc = productsCollection.doc(productId);
-    await productDoc.update({ imageUrl });
-  };
-
-
-  // Delete Product 
-  const deleteProduct = async (id) => {
-    const productDoc = doc(db, 'products', id);
-    await deleteDoc(productDoc);
-    getProductsList()
-  };
-
-
-  // const fs = require('fs');
-  const prNameInp = useRef()
-  // // Function to update the JSON file with the input value
-  // function updateJsonFile(value) {
-  //     const data = { productName: value };
-
-  //     // Write data to JSON file
-  //     fs.writeFileSync('en.json', JSON.stringify(data, null, 2));
-  // }
-
-  console.log(prNameInp.current)
 
   return (
     <>
       <Header />
 
-      <MainTitle />
+      <MainTitle theTitle={t('storeTitle')}/>
 
       <div className='container' >
         <div className='products'>
@@ -116,7 +59,6 @@ function Home() {
               {/* <p>{product.type}</p> */}
               <h2 className='productPrice'>{product.price}$</h2>
               <div className='buttons'>
-                <button className='btn' onClick={() => {deleteProduct(product.id)}}>Delete This Product</button>
                 <Link to={`/product/${product.id}`}><button className='btn'>Buy It</button></Link>
               </div>
             </div>
@@ -124,13 +66,13 @@ function Home() {
         </div>
 
 
-        <div className='addProduct'>
+        {/* <div className='addProduct'>
           <h2>Add New Product:</h2>
 
           <div className='productDetails'>
             <div>
               <label>Name:</label>
-              <input type='text' placeholder='Product Name' ref={prNameInp} onChange={(e) => setNewProductName(e.target.value)} />
+              <input type='text' placeholder='Product Name' onChange={(e) => setNewProductName(e.target.value)} />
             </div>
 
             <div>
@@ -175,7 +117,7 @@ function Home() {
             uploadImage();
           }}>Add Product</button>
 
-        </div>
+        </div> */}
       </div>
 
 

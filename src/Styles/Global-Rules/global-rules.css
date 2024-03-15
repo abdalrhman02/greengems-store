@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Retro Gaming";
 }
 
 :root {
@@ -12,6 +11,7 @@
 
 body {
   background-color: var(--t-color);
+  font-family: "Retro Gaming";
 }
 
 ul {
@@ -56,5 +56,20 @@ a {
 
 @font-face {
   font-family: "Retro Gaming";
-  src: url("../../Fonts//Retro Gaming.ttf"), url("../../Fonts/Arabic Pixel 2.ttf");
+  src: url("../../Fonts/Retro Gaming.ttf");
+}
+@font-face {
+  font-family: "Alexandria";
+  src: url("../../Fonts/Alexandria.ttf");
+}
+/* Admin Page */
+.adminPage header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-bottom: 4em;
+}
+.adminPage header img {
+  width: 7em;
 }/*# sourceMappingURL=global-rules.css.map */
