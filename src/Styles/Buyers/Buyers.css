@@ -87,12 +87,26 @@
 }
 @media (max-width: 580px) {
   .buyers .buyer .msg {
-    width: 24em;
+    width: 23em;
     height: 9em;
   }
   .buyers .buyer .gif {
     position: absolute;
     width: 7em;
     top: -98px;
+  }
+  .buyers .buyer .pac {
+    top: -47px;
+  }
+  .buyers .buyer .pac .pacman {
+    width: 3em;
+    margin-left: 1.5em;
+  }
+  .buyers .buyer .pac img {
+    width: 2.7em;
+  }
+  .buyers .buyer .ryu {
+    width: 17em;
+    top: -112px;
   }
 }/*# sourceMappingURL=Buyers.css.map */
