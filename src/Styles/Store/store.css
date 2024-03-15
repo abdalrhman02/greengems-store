@@ -1,4 +1,4 @@
-.container .products {
+.store .container .products {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,23 +6,24 @@
   gap: 5em;
   height: 100%;
 }
-.container .products .product {
+.store .container .products .product {
   text-align: center;
   background-color: #fff;
   border-radius: 5px;
-  width: 22%;
-  height: 31em;
+  width: 21em;
+  height: -moz-fit-content;
+  height: fit-content;
   border-top-right-radius: 17px;
   border-top-left-radius: 17px;
 }
-.container .products .product .image {
+.store .container .products .product .image {
   overflow: hidden;
 }
-.container .products .product .image img {
+.store .container .products .product .image img {
   width: 100%;
   height: 22em;
 }
-.container .products .product .productName {
+.store .container .products .product .productName {
   font-size: 26px;
   color: #fff;
   background-color: var(--s-color);
@@ -30,57 +31,34 @@
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
-.container .products .product .productPrice {
+.store .container .products .product .productPrice {
   font-size: 20px;
   margin: 5px 0 10px;
 }
-.container .products .product .productDescription {
+.store .container .products .product .productDescription {
   max-width: 350px;
   font-size: 14px;
 }
-.container .products .product .buttons {
+.store .container .products .product .buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
   padding-bottom: 10px;
 }
-.container .products .product .buttons .btn {
+.store .container .products .product .buttons .btn {
   width: 10em;
   height: 3em;
   font-size: 14px;
 }
-.container .products .product .buttons .deleteBtn {
+.store .container .products .product .buttons .deleteBtn {
   display: none;
 }
-@media (max-width: 1500px) {
-  .container .products .product {
-    width: 32%;
-  }
-  .container .products .product .productName {
-    font-size: 23px;
-  }
-}
-@media (max-width: 1200px) {
-  .container .products .product {
-    width: 40%;
-  }
-}
-@media (max-width: 1000px) {
-  .container .products .product {
-    width: 60%;
-  }
-}
-@media (max-width: 800px) {
-  .container .products .product {
-    width: 90%;
-  }
-}
-.container .addProduct {
+.store .container .addProduct {
   color: #FFF;
   position: relative;
   margin-top: 8em;
 }
-.container .addProduct h2 {
+.store .container .addProduct h2 {
   background: var(--f-color);
   width: -moz-fit-content;
   width: fit-content;
@@ -92,7 +70,7 @@
   transform: translateX(-50%);
   text-align: center;
 }
-.container .addProduct .productDetails {
+.store .container .addProduct .productDetails {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,15 +79,15 @@
   gap: 3em;
   margin-bottom: 1em;
 }
-.container .addProduct .productDetails div {
+.store .container .addProduct .productDetails div {
   display: flex;
   flex-direction: column;
 }
-.container .addProduct .productDetails div label {
+.store .container .addProduct .productDetails div label {
   margin: 0 7px 5px 0;
   font-size: 18px;
 }
-.container .addProduct .productDetails div input {
+.store .container .addProduct .productDetails div input {
   border: 2px solid var(--f-color);
   border-radius: 3px;
   outline: none;
@@ -117,22 +95,28 @@
   padding-left: 7px;
 }
 @media (max-width: 1000px) {
-  .container .addProduct .productDetails input {
+  .store .container .addProduct .productDetails input {
     height: 3.5em;
     width: 22em;
   }
-  .container .addProduct .productDetails label {
+  .store .container .addProduct .productDetails label {
     margin: 0 0 7px 0;
   }
 }
-.container .addProduct .productDetails .imageInp {
+.store .container .addProduct .productDetails .imageInp {
   width: 15em;
 }
-.container .addProduct .addBtn {
+.store .container .addProduct .addBtn {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 11em;
   height: 2.5em;
   margin-top: 10px;
+}
+
+@media (max-width: 550px) {
+  .store .container {
+    padding: 0 40px;
+  }
 }/*# sourceMappingURL=store.css.map */

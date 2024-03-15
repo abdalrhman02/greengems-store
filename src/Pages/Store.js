@@ -46,78 +46,26 @@ function Home() {
 
       <MainTitle theTitle={t('storeTitle')}/>
 
-      <div className='container' >
-        <div className='products'>
-          {productsList.map((product) => (
-            <div className='product'>
-              <h1 className='productName'>{product.name}</h1>
+      <div className='store'>
+        <div className='container' >
+          <div className='products'>
+            {productsList.map((product) => (
+              <div className='product'>
+                <h1 className='productName'>{product.name}</h1>
 
-              <div className='image'>
-                <img src={product.imageUrl + '?alt=media'} alt={`Product ${product.id}_${product.name}`} />
-              </div>
+                <div className='image'>
+                  <img src={product.imageUrl + '?alt=media'} alt={`Product ${product.id}_${product.name}`} />
+                </div>
 
-              {/* <p>{product.type}</p> */}
-              <h2 className='productPrice'>{product.price}$</h2>
-              <div className='buttons'>
-                <Link to={`/product/${product.id}`}><button className='btn'>Buy It</button></Link>
+                {/* <p>{product.type}</p> */}
+                <h2 className='productPrice'>{product.price}$</h2>
+                <div className='buttons'>
+                  <Link to={`/product/${product.id}`}><button className='btn'>Buy It</button></Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
-
-        {/* <div className='addProduct'>
-          <h2>Add New Product:</h2>
-
-          <div className='productDetails'>
-            <div>
-              <label>Name:</label>
-              <input type='text' placeholder='Product Name' onChange={(e) => setNewProductName(e.target.value)} />
-            </div>
-
-            <div>
-              <label>Description:</label>
-              <input type='text' placeholder='Product Description' onChange={(e) => setNewProductDesc(e.target.value)} />
-            </div>
-
-            <div>
-              <label>Price:</label>
-              <input type='number' placeholder='Product Price' onChange={(e) => setNewProductPrice(e.target.value)} />
-            </div>
-
-            <div>
-              <label>Type:</label>
-              <input type='text' placeholder='Product Type' onChange={(e) => setNewProductType(e.target.value)} />
-            </div>
-            
-            <input type='file' onChange={(e) => setImageUpload(e.target.files[0])} className='imageInp' />
-          </div>
-
-          <div className='productDetails'>
-            <div>
-              <label>Feature 1:</label>
-              <input type='text' placeholder='Product Name' onChange={(e) => setNewProductFeature1(e.target.value)} />
-            </div>
-
-            <div>
-              <label>Feature 2:</label>
-              <input type='text' placeholder='Product Description' onChange={(e) => setNewProductFeature2(e.target.value)} />
-            </div>
-
-            <div>
-              <label>Feature 3:</label>
-              <input type='text' placeholder='Product Price' onChange={(e) => setNewProductFeature3(e.target.value)} />
-            </div>
-            
-          </div>
-
-
-          <button className='addBtn btn' onClick={() => {
-            addProduct();
-            uploadImage();
-          }}>Add Product</button>
-
-        </div> */}
       </div>
 
 

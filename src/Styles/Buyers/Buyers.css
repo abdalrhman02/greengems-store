@@ -2,7 +2,7 @@
   margin-top: 10em;
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: 8em;
 }
 .buyers .buyer {
   position: relative;
@@ -64,4 +64,35 @@
 }
 .buyers .right .count {
   left: 30px;
+}
+
+@media (max-width: 1000px) {
+  .buyers {
+    align-items: center;
+    gap: 12em;
+  }
+  .buyers .right {
+    align-self: auto;
+  }
+}
+@media (max-width: 900px) {
+  .buyers .buyer .msg {
+    width: 38em;
+  }
+}
+@media (max-width: 680px) {
+  .buyers .buyer .msg {
+    width: 33em;
+  }
+}
+@media (max-width: 580px) {
+  .buyers .buyer .msg {
+    width: 24em;
+    height: 9em;
+  }
+  .buyers .buyer .gif {
+    position: absolute;
+    width: 7em;
+    top: -98px;
+  }
 }/*# sourceMappingURL=Buyers.css.map */
