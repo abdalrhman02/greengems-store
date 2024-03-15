@@ -63,7 +63,9 @@ function Home() {
             <h4>Green Gems Store</h4>
             <p>{t("aboutusPara1")}</p>
             <p style={{marginTop: '20px'}}>{t("aboutusPara2")}</p>
+          </div>
 
+          <div className='image'>
             <img src={require('../Images/Ryu.png')} />
           </div>
         </div>

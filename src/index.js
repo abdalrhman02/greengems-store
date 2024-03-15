@@ -20,6 +20,7 @@ import './Styles/all.min.css'
 import './Styles/Global-Rules/global-rules.css';
 import './Styles/HomePage/home.css';
 import './Styles/Store/store.css';
+import './Styles/Buyers/Buyers.css';
 import './Styles/ProductPage/productPage.css'
 import './Styles/Login/login.css'
 

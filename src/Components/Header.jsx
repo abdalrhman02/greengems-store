@@ -37,8 +37,7 @@ function Header() {
                     <ul>
                         <a href="/"><li>{t("headerLink1")}</li></a>
                         <a href="Store"><li>{t("headerLink2")}</li></a>
-                        <a href="#"><li>{t("headerLink3")}</li></a>
-                        <a href="Buyers"><li>{t("headerLink4")}</li></a>
+                        <a href="Buyers"><li>{t("headerLink3")}</li></a>
                     </ul>
                 </div>
 
@@ -53,7 +52,6 @@ function Header() {
                         </div>
                     </div>
 
-                    <a href="#" className='shopping-cart'><img className='shopping-cart-img' src={require('../Images/Icons/shopping-cart.png')} /></a>
                     <a href="Signup"><button className='btn'>{t('login')}</button></a>
                 </div>
 

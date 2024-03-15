@@ -6,6 +6,7 @@
 .title h2 {
   color: #FFF;
   position: relative;
+  font-size: 28px;
 }
 .title h2::before, .title h2::after {
   content: "";

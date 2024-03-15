@@ -40,7 +40,7 @@ header {
                 display: flex;
                 align-items: center;
                 gap: 5px;
-                margin-left: 20px;
+                margin-right: 1em;
                 background-color: #FFF;
                 padding: 2px 5px;
                 border-radius: 5px;
@@ -79,15 +79,6 @@ header {
                 }
             }
 
-            .shopping-cart {
-                margin: 0 15px;
-
-                .shopping-cart-img {
-                    width: 30px;
-                    padding-top: 8px
-                }
-            }
-
             .btn {
                 background-color: var(--t-color);
                 width: 6em;
@@ -100,5 +91,32 @@ header {
         }
 
 
+    }
+}
+
+@media (max-width: 900px) {
+    header .container {
+        padding: 0 60px
+    }
+
+    .landing .container .landingContent {
+        width: 70%;
+    }
+}
+
+@media (max-width: 750px) {
+    header {
+        height: fit-content;
+        padding: 1em 0
+    }
+    header .container {
+        flex-direction: column;
+    }
+
+    .landing .container .landingContent h2 {
+        font-size: 2.5em;
+    }
+    .landing .container .landingContent p {
+        font-size: 21px;
     }
 }

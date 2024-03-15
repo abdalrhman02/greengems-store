@@ -19,24 +19,6 @@ footer::after {
   height: 100%;
   width: 50%;
 }
-footer .links {
-  margin-right: 0.8em;
-  position: relative;
-}
-footer .links a {
-  margin-right: 15px;
-  color: #FFF;
-}
-footer .links::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #FFF;
-  width: 2px;
-  height: 20px;
-}
 footer .socials {
   display: flex;
   align-items: center;
@@ -48,4 +30,10 @@ footer .socials p {
 footer .socials img {
   width: 1.6em;
   margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+  footer {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=footer.css.map */

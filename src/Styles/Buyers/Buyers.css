@@ -1,0 +1,67 @@
+.buyers {
+  margin-top: 10em;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+.buyers .buyer {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.buyers .buyer .count {
+  color: #fff;
+  font-size: 3em;
+  position: absolute;
+  top: -1.25em;
+  background-color: var(--f-color);
+  padding: 0px 12px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.buyers .buyer .msg {
+  border: 5px solid var(--f-color);
+  border-radius: 5px;
+  width: 47em;
+}
+.buyers .buyer .gif {
+  position: absolute;
+  width: 8em;
+  top: -118px;
+}
+.buyers .buyer .zelda {
+  width: 9em;
+}
+.buyers .buyer .pac {
+  align-items: end;
+  position: absolute;
+  top: -80px;
+  right: 2em;
+}
+.buyers .buyer .pac .pacman {
+  width: 5em;
+  transform: rotate(180deg);
+  margin-left: 3em;
+}
+.buyers .buyer .pac img {
+  width: 4em;
+}
+.buyers .buyer .ryu {
+  width: 30em;
+  top: -203px;
+}
+.buyers .left .gif {
+  left: 2em;
+}
+.buyers .left .count {
+  right: 30px;
+}
+.buyers .right {
+  align-self: end;
+}
+.buyers .right .gif {
+  right: 2em;
+}
+.buyers .right .count {
+  left: 30px;
+}/*# sourceMappingURL=Buyers.css.map */

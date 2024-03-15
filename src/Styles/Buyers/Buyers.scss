@@ -1,13 +1,83 @@
 .buyers {
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
 
     .buyer {
         position: relative;
-        .msg {
+        width: fit-content;
 
+        .count {
+            color: #fff;
+            font-size: 3em;
+            position: absolute;
+            top: -1.25em;
+            background-color: var(--f-color);
+            padding: 0px 12px;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+
+        .msg {
+            border: 5px solid var(--f-color);
+            border-radius: 5px;
+            width: 47em;
         }
 
         .gif {
+          position: absolute;
+          width: 8em;
+          top: -118px;
+        }
+
+        .zelda {
+            width: 9em;
+        }
+
+        .pac {
+            align-items: end;
             position: absolute;
+            top: -80px;
+            right:2em;
+
+            .pacman {
+                width:5em;
+                transform: rotate(180deg);
+                margin-left: 3em;
+            }
+
+            img {
+                width: 4em
+            }
+        }
+
+        .ryu {
+            width: 30em;
+            top: -203px;
         }
     }
+
+
+
+    .left {
+        .gif {
+            left: 2em;
+        }
+
+        .count {
+            right: 30px;
+        }
+    }
+
+    .right {
+        align-self: end;
+        .gif {
+            right:2em;
+        }
+        .count {
+            left: 30px;
+        }
+    }
+
 }
