@@ -66,7 +66,9 @@ function Home() {
           </div>
 
           <div className='image'>
-            <img src={require('../Images/Ryu.png')} />
+            <img src={require('../Images/Ryu.png')} className='ryu'/>
+
+            <img src={require('../Images/GIF/smallRyuGif.gif')} className='smallRyu' />
           </div>
         </div>
       </div>

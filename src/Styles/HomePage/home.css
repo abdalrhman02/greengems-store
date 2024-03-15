@@ -59,17 +59,24 @@
 }
 
 .aboutus {
-  padding: 4em 0;
   margin-top: 12em;
+  display: flex;
+  justify-content: center;
 }
 .aboutus .container {
   position: relative;
-}
-.aboutus .container .text {
   color: #fff;
   background-color: #212121;
-  padding: 70px 3em;
+  margin: 0 130px;
+  padding: 5em 50px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  width: 75%;
+}
+.aboutus .container .text {
   border-radius: 20px;
+  width: 80%;
 }
 .aboutus .container .text h3 {
   font-size: 27px;
@@ -85,12 +92,25 @@
   font-size: 18px;
 }
 .aboutus .container .image {
-  position: absolute;
-  top: -115px;
-  right: 13em;
+  position: relative;
+  width: 20%;
 }
-.aboutus .container .image img {
-  width: 18em;
+.aboutus .container .image .ryu {
+  width: 19em;
+  position: absolute;
+  top: -22em;
+}
+.aboutus .container .image .smallRyu {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .aboutus .container .image .smallRyu {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16em;
+  }
 }
 
 @media (max-width: 900px) {
@@ -108,6 +128,28 @@
 }
 @media (max-width: 1450px) {
   .aboutus .container .text p {
-    max-width: 650px;
+    max-width: 700px;
+  }
+}
+@media (max-width: 1100px) {
+  .aboutus .container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 3em;
+  }
+  .ryu {
+    display: none;
+  }
+  .smallRyu {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16em;
+  }
+}
+@media (max-width: 900px) {
+  .aboutus .container {
+    margin: 0 25px;
   }
 }/*# sourceMappingURL=home.css.map */
