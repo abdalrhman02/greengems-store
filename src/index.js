@@ -23,6 +23,7 @@ import './Styles/Store/store.css';
 import './Styles/Buyers/Buyers.css';
 import './Styles/ProductPage/productPage.css'
 import './Styles/Login/login.css'
+import './Styles/AdminPage/adminPage.css'
 
 // Components Styles Files
 import './Components/Components-style/Header/header.css';

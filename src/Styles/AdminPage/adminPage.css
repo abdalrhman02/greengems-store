@@ -1,0 +1,116 @@
+.container .products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5em;
+  height: 100%;
+}
+.container .products .product {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 21em;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-top-right-radius: 17px;
+  border-top-left-radius: 17px;
+}
+.container .products .product .image {
+  overflow: hidden;
+}
+.container .products .product .image img {
+  width: 100%;
+  height: 22em;
+}
+.container .products .product .productName {
+  font-size: 26px;
+  color: #fff;
+  background-color: var(--s-color);
+  padding: 6px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.container .products .product .productPrice {
+  font-size: 20px;
+  margin: 5px 0 10px;
+}
+.container .products .product .productDescription {
+  max-width: 350px;
+  font-size: 14px;
+}
+.container .products .product .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.container .products .product .buttons .btn {
+  width: 10em;
+  height: 3em;
+  font-size: 14px;
+}
+.container .products .product .buttons .deleteBtn {
+  display: none;
+}
+.container .addProduct {
+  color: #FFF;
+  position: relative;
+  margin-top: 8em;
+}
+.container .addProduct h2 {
+  background: var(--f-color);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.container .addProduct .productDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 3em;
+  margin-bottom: 1em;
+}
+.container .addProduct .productDetails div {
+  display: flex;
+  flex-direction: column;
+}
+.container .addProduct .productDetails div label {
+  margin: 0 7px 5px 0;
+  font-size: 18px;
+}
+.container .addProduct .productDetails div input {
+  border: 2px solid var(--f-color);
+  border-radius: 3px;
+  outline: none;
+  height: 2.5em;
+  padding-left: 7px;
+}
+@media (max-width: 1000px) {
+  .container .addProduct .productDetails input {
+    height: 3.5em;
+    width: 22em;
+  }
+  .container .addProduct .productDetails label {
+    margin: 0 0 7px 0;
+  }
+}
+.container .addProduct .productDetails .imageInp {
+  width: 15em;
+}
+.container .addProduct .addBtn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 11em;
+  height: 2.5em;
+  margin-top: 10px;
+}/*# sourceMappingURL=adminPage.css.map */

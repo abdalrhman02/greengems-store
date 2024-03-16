@@ -5,14 +5,13 @@
     --s-color: #00944a;
     --t-color: #03743c;
 }
-
 @media (prefers-color-scheme: dark) {
     :root {
         --f-color: #00b45d;
         --s-color: #00944a;
         --t-color: #03743c;
     }
- }
+}
 
 body {background-color: var(--t-color); font-family: 'Retro Gaming'; }
 ul {list-style-type: none;}

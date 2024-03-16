@@ -51,12 +51,14 @@ function ProductPage() {
           </div>
 
           <div className='more'>
-            <h2>More:</h2>
-            <ul>
-              <li>{product.feature1}</li>
-              <li>{product.feature2}</li>
-              <li>{product.feature3}</li>
-            </ul>
+            <div className='container'>
+              <h2>More:</h2>
+              <ul>
+                <li>{product.feature1}</li>
+                <li>{product.feature2}</li>
+                <li>{product.feature3}</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

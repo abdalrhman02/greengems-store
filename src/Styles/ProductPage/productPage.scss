@@ -38,14 +38,15 @@
                 font-size: 18px;
             }
             .prPrice {
+                font-size: 18px;
+                font-weight: normal;
                 margin: 20px 0;
                 background-color: var(--f-color);
                 padding: 7px 7px;
-                width: 2.2em;
+                width: fit-content;
                 text-align: center;
                 border-radius: 8px;
-                font-size: 18px;
-                font-weight: normal;
+
             }
             .prDesc {
                 max-width: 600px;
