@@ -1,6 +1,10 @@
 
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next'; 
+
+import { auth } from "../firebaseConfig";
+import { signOut } from 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 function Header() {
 
@@ -25,6 +29,26 @@ function Header() {
         i18n.changeLanguage("ar");
         body.style.cssText = "font-family: 'Alexandria'";
     }
+
+
+    // Logout Button
+    const logout = async () => {
+        await signOut(auth);
+    }
+
+    const [ user ] = useAuthState(auth);
+    const signoutBtn = useRef();
+    useEffect(() => {
+        if (signoutBtn.current) {
+            if (user) {
+                signoutBtn.current.classList.add('disBlock');
+                signoutBtn.current.classList.remove('disNone');
+            } else {
+                signoutBtn.current.classList.add('disNone');
+                signoutBtn.current.classList.remove('disBlock');
+            }
+        }
+    }, [user]);
 
     return (
         <header>
@@ -52,7 +76,8 @@ function Header() {
                         </div>
                     </div>
 
-                    <a href="Signup"><button className='btn'>{t('login')}</button></a>
+                    <a href="Login"><button className='btn login'>{t('login')}</button></a>
+                    <a onClick={logout} ref={signoutBtn}><button className='btn'>Sign Out</button></a>
                 </div>
 
             </div>

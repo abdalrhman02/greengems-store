@@ -1,13 +1,16 @@
 {
     "signup": "Signup",
-    "register": "Register and enjoy with the best gaming devices",
+    "signupSentence": "Register and enjoy with the best gaming devices",
     "usernameInput": "Username",
     "passwordInput": "Password",
     "emailInput": "Email",
     "repeatEmailInput": "Repeat Email Again",
     "hasAnAccount": "Already has an account?",
     "dontHasAnAccount": "Want create new account?",
+
     "login": "Login",
+    "loginSentence": "Login and enjoy with the best gaming devices",
+
 
     "APHeader": "This Page for admin to add product.",
     "APAddProduct": "Add New Product",

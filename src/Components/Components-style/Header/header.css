@@ -76,6 +76,9 @@ header .container .right .btn {
 header .container .right .btn:hover {
   background-color: var(--t-color);
 }
+header .container .right .login {
+  margin-right: 0.7em;
+}
 
 @media (max-width: 900px) {
   header .container {

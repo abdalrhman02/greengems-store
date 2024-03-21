@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import ProductCard from '../Components/Product-Card'
+import ProductCard from '../Components/Product-Card';
 import MainTitle from '../Components/MainTitle';
 
 // Firebase Imports

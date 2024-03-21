@@ -40,15 +40,14 @@ function Signup() {
             setPasswordValid(true)
         }
 
-        const emailEx = 'example@email.com';
+        const emailEx = 'example@gmail.com';
         if(!/\S+@\S+\.\S+/.test(emailEx)) {
             emailInpRef.current.style.border = '2px solid red';
             return;
         } else {
             emailInpRef.current.style.border = '1px solid #333333'
             setEmailValid(true)
-        }
-        
+        }    
         
         if (repeatEmail.value !== email.value) {
             repeatEmailInpRef.current.style.border = '2px solid red';
@@ -88,7 +87,7 @@ function Signup() {
 
                 <div className="right">
                     <h2>{t("signup")}</h2>
-                    <p>{t("register")}</p>
+                    <p>{t("signupSentence")}</p>
 
                     <form onSubmit={handleSignup}>
                         <div>

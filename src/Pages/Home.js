@@ -2,16 +2,21 @@
 import { useTranslation } from 'react-i18next';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import ProductCard from '../Components/Product-Card'
+import ProductCard from '../Components/Product-Card';
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from "../firebaseConfig";
+
 
 function Home() {
-
   const { t, i18n } = useTranslation();
+
+  const [ user ] = useAuthState(auth);
 
   return (
     <>
       <Header />
-
+      {user?.displayName}
       <div className='landing'>
         <div className='container'>
           <div className='landingContent'>
