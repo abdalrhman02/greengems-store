@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
-import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import ProductCard from '../Components/Product-Card';
 import MainTitle from '../Components/MainTitle';
@@ -102,7 +101,6 @@ function AdminPage() {
                     <img src={product.imageUrl + '?alt=media'} alt={`Product ${product.id}_${product.name}`} />
                 </div>
 
-                {/* <p>{product.type}</p> */}
                 <h2 className='productPrice'>{product.price}$</h2>
                 <div className='buttons'>
                     <button className='btn' onClick={() => {deleteProduct(product.id)}}>Delete This Product</button>

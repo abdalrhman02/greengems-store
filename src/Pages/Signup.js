@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { useState, useRef } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "../firebaseConfig";
+import { auth, db } from "../firebaseConfig";
+import { doc, setDoc } from 'firebase/firestore'
 
 function Signup() {
     const { t, i18n } = useTranslation();
@@ -68,6 +69,13 @@ function Signup() {
     
                 const user = userCredential.user;
                 await updateProfile(user, { displayName: username });
+
+                // Store user data in Firestore
+                await setDoc(doc(db, "users", user.uid), {
+                    username: username,
+                    email: email,
+                    role: "User",
+                });
             }
             catch(error) {
                 alert(error.message)

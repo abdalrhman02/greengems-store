@@ -1,13 +1,16 @@
 
-import { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next'; 
 
 import { auth } from "../firebaseConfig";
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { db } from "../firebaseConfig";
+import { doc, updateDoc } from "firebase/firestore";
 
 function Header() {
 
+    // Change Languages
     let langBar = useRef();
     const openLang = () => {
         if(langBar.current.classList.contains('disNone')) {
@@ -37,18 +40,60 @@ function Header() {
     }
 
     const [ user ] = useAuthState(auth);
+    const loginBtn = useRef();
     const signoutBtn = useRef();
     useEffect(() => {
         if (signoutBtn.current) {
             if (user) {
                 signoutBtn.current.classList.add('disBlock');
                 signoutBtn.current.classList.remove('disNone');
+
+                loginBtn.current.classList.add('disNone');
+                loginBtn.current.classList.remove('disBlock');
             } else {
                 signoutBtn.current.classList.add('disNone');
                 signoutBtn.current.classList.remove('disBlock');
+
+                loginBtn.current.classList.add('disBlock');
+                loginBtn.current.classList.remove('disNone');
             }
         }
     }, [user]);
+
+
+    // Admin Role
+    const [userId, setUserId] = useState(null); // Initialize userId state
+    useEffect(() => {
+        const currentUser = auth.currentUser;
+        if (currentUser) {
+            setUserId(currentUser.uid);
+        }
+    }, []);
+
+    const handleAdminRole = () => {
+        const currentUser = auth.currentUser;
+        if (currentUser) {
+            // User is logged in, change role to Admin
+            changeUserRoleToAdmin(currentUser.uid);
+        } else {
+            // No user is logged in, display error message or handle accordingly
+            console.error("No user is currently logged in.");
+        }
+    };
+    const changeUserRoleToAdmin = async (userId) => {
+        try {
+            const userRef = doc(db, "users", userId);
+    
+            await updateDoc(userRef, {
+                role: "Admin",
+            });
+    
+            console.log(`User role changed to Admin successfully for user with ID: ${userId}`);
+        } catch (error) {
+            console.error("Error changing user role:");
+        }
+    };
+
 
     return (
         <header>
@@ -76,8 +121,9 @@ function Header() {
                         </div>
                     </div>
 
-                    <a href="Login"><button className='btn login'>{t('login')}</button></a>
+                    <a href="Login" ref={loginBtn}><button className='btn login'>{t('login')}</button></a>
                     <a onClick={logout} ref={signoutBtn}><button className='btn'>Sign Out</button></a>
+                    <button className='btn' onClick={handleAdminRole}>Admin Role</button>
                 </div>
 
             </div>

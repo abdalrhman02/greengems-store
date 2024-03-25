@@ -1,17 +1,31 @@
-
 import { useTranslation } from 'react-i18next';
+// Hooks
+import { useState, useEffect } from 'react';
+
+// Components
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import ProductCard from '../Components/Product-Card';
 
+// Routing 
+import { useLocation } from 'react-router-dom';
+
+// Firebase
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from "../firebaseConfig";
-
+import { checkPermissions } from '../permessionSer';
 
 function Home() {
   const { t, i18n } = useTranslation();
 
-  const [ user ] = useAuthState(auth);
+  const location = useLocation();
+  const [user] = useAuthState(auth);
+
+  useEffect(() => {
+    if (user) { 
+      checkPermissions(user.uid); 
+    }
+  }, [location.pathname, user]);
 
   return (
     <>
