@@ -31,15 +31,6 @@ function Home() {
 
   console.log(productsList)
 
-  const [newProductName, setNewProductName] = useState('');
-  const [newProductPrice, setNewProductPrice] = useState(0);
-  const [newProductDesc, setNewProductDesc] = useState('');
-  const [newProductType, setNewProductType] = useState('');
-  const [newProductFeature1, setNewProductFeature1] = useState('');
-  const [newProductFeature2, setNewProductFeature2] = useState('');
-  const [newProductFeature3, setNewProductFeature3] = useState('');
-
-
   return (
     <>
       <Header />

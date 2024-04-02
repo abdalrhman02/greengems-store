@@ -1,8 +1,7 @@
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import MainTitle from '../Components/MainTitle';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebaseConfig';

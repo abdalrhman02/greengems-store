@@ -18,14 +18,7 @@ import { checkPermissions } from '../permessionSer';
 function Home() {
   const { t, i18n } = useTranslation();
 
-  const location = useLocation();
   const [user] = useAuthState(auth);
-
-  useEffect(() => {
-    if (user) { 
-      checkPermissions(user.uid); 
-    }
-  }, [location.pathname, user]);
 
   return (
     <>

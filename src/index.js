@@ -44,8 +44,9 @@ const router = createBrowserRouter([
   { path: "product/:id", element: <ProductPage /> },
   { path: "Signup", element: <Signup /> },
   { path: "Login", element: <Login /> },
-  { path: "AdminPage", element: <AdminPage /> },
+  { path: "AdminPage", element: <AdminPage />},
 ]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

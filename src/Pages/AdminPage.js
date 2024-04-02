@@ -4,17 +4,47 @@ import { Link } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
 import Footer from '../Components/Footer';
-import ProductCard from '../Components/Product-Card';
-import MainTitle from '../Components/MainTitle';
 
 // Firebase Imports
-import { db } from '../firebaseConfig';
-import { getDocs, addDoc, deleteDoc, doc, updateDoc , collection } from 'firebase/firestore';
+import { auth, db } from '../firebaseConfig';
+import { getDocs, getDoc, addDoc, deleteDoc, doc, updateDoc , collection } from 'firebase/firestore';
 import { getStorage, ref , uploadBytes, getDownloadURL  } from 'firebase/storage';
+
 
 
 function AdminPage() {
     const { t, i18n } = useTranslation();
+
+        const checkPermissions = async (userId) => {
+          try {
+              const userDocRef = doc(db, 'users', userId);
+              const userDocSnapshot = await getDoc(userDocRef);
+          
+              if (userDocSnapshot.exists()) {
+                  const userData = userDocSnapshot.data();
+                  const userRole = userData.role;
+
+                  if (userRole === 'Admin') {
+                    window.location.href = '/AdminPage'
+                  } else {
+                    window.location.href = '/'
+                  }
+              }
+          } catch (error) {
+              console.error('Error checking permissions:', error);
+          }
+        };
+
+      useEffect(() => {
+        const currentUser = auth.currentUser;
+        if (currentUser) {
+          console.log("THERE IS A USER !")
+          checkPermissions(currentUser.uid)
+        } else {
+          console.log("NO USER !")
+        }
+      }, [])
+
 
     const [productsList, setProductsList] = useState([]);
     const productsCollection = collection(db, "products");
@@ -28,7 +58,6 @@ function AdminPage() {
       getProductsList()
     }, []);
   
-    console.log(productsList)
   
     const [newProductName, setNewProductName] = useState('');
     const [newProductPrice, setNewProductPrice] = useState(0);
@@ -74,7 +103,7 @@ function AdminPage() {
       const productDoc = productsCollection.doc(productId);
       await productDoc.update({ imageUrl });
     };
-  
+
   
     // Delete Product 
     const deleteProduct = async (id) => {
@@ -92,75 +121,75 @@ function AdminPage() {
 
 
             <div className='container' >
-            <div className='products'>
-            {productsList.map((product) => (
-                <div className='product'>
-                <h1 className='productName'>{product.name}</h1>
+              <div className='products'>
+                {productsList.map((product) => (
+                    <div className='product'>
+                    <h1 className='productName'>{product.name}</h1>
 
-                <div className='image'>
-                    <img src={product.imageUrl + '?alt=media'} alt={`Product ${product.id}_${product.name}`} />
-                </div>
+                      <div className='image'>
+                          <img src={product.imageUrl + '?alt=media'} alt={`Product ${product.id}_${product.name}`} />
+                      </div>
 
-                <h2 className='productPrice'>{product.price}$</h2>
-                <div className='buttons'>
-                    <button className='btn' onClick={() => {deleteProduct(product.id)}}>Delete This Product</button>
-                    <Link to={`/product/${product.id}`}><button className='btn'>Buy It</button></Link>
-                </div>
-                </div>
-            ))}
-            </div>
+                      <h2 className='productPrice'>{product.price}$</h2>
+                      <div className='buttons'>
+                          <button className='btn' onClick={() => {deleteProduct(product.id)}}>Delete This Product</button>
+                          <Link to={`/product/${product.id}`}><button className='btn'>Buy It</button></Link>
+                      </div>
+                    </div>
+                ))}
+              </div>
 
 
             <div className='addProduct'>
-            <h2>{t("APAddProduct")}</h2>
+              <h2>{t("APAddProduct")}</h2>
 
-            <div className='productDetails'>
-                <div>
-                <label>{t("APinpName")}</label>
-                <input type='text' placeholder={t("APinpNameHolder")} onChange={(e) => setNewProductName(e.target.value)} />
-                </div>
+              <div className='productDetails'>
+                  <div>
+                  <label>{t("APinpName")}</label>
+                  <input type='text' placeholder={t("APinpNameHolder")} onChange={(e) => setNewProductName(e.target.value)} />
+                  </div>
 
-                <div>
-                <label>{t("APinpDescription")}</label>
-                <input type='text' placeholder={t("APinpDescriptionHolder")} onChange={(e) => setNewProductDesc(e.target.value)} />
-                </div>
+                  <div>
+                  <label>{t("APinpDescription")}</label>
+                  <input type='text' placeholder={t("APinpDescriptionHolder")} onChange={(e) => setNewProductDesc(e.target.value)} />
+                  </div>
 
-                <div>
-                <label>{t("APinpPrice")}</label>
-                <input type='number' placeholder={t("APinpPriceHolder")} onChange={(e) => setNewProductPrice(e.target.value)} />
-                </div>
+                  <div>
+                  <label>{t("APinpPrice")}</label>
+                  <input type='number' placeholder={t("APinpPriceHolder")} onChange={(e) => setNewProductPrice(e.target.value)} />
+                  </div>
 
-                <div>
-                <label>{t("APinpType")}</label>
-                <input type='text' placeholder={t("APinpTypeHolder")} onChange={(e) => setNewProductType(e.target.value)} />
-                </div>
-                
-                <input type='file' onChange={(e) => setImageUpload(e.target.files[0])} className='imageInp' />
-            </div>
+                  <div>
+                  <label>{t("APinpType")}</label>
+                  <input type='text' placeholder={t("APinpTypeHolder")} onChange={(e) => setNewProductType(e.target.value)} />
+                  </div>
+                  
+                  <input type='file' onChange={(e) => setImageUpload(e.target.files[0])} className='imageInp' />
+              </div>
 
-            <div className='productDetails'>
-                <div>
-                <label>{t("APinpFeature")+ " " + 1} </label>
-                <input type='text' placeholder={t("APinpFeatureHolder")+ " " + 1} onChange={(e) => setNewProductFeature1(e.target.value)} />
-                </div>
+              <div className='productDetails'>
+                  <div>
+                  <label>{t("APinpFeature")+ " " + 1} </label>
+                  <input type='text' placeholder={t("APinpFeatureHolder")+ " " + 1} onChange={(e) => setNewProductFeature1(e.target.value)} />
+                  </div>
 
-                <div>
-                <label>{t("APinpFeature")+ " " + 2}</label>
-                <input type='text' placeholder={t("APinpFeatureHolder" + " " + 2)} onChange={(e) => setNewProductFeature2(e.target.value)} />
-                </div>
+                  <div>
+                  <label>{t("APinpFeature")+ " " + 2}</label>
+                  <input type='text' placeholder={t("APinpFeatureHolder" + " " + 2)} onChange={(e) => setNewProductFeature2(e.target.value)} />
+                  </div>
 
-                <div>
-                <label>{t("APinpFeature")+ " " + 3}</label>
-                <input type='text' placeholder={t("APinpFeatureHolder" + " " + 3)} onChange={(e) => setNewProductFeature3(e.target.value)} />
-                </div>
-                
-            </div>
+                  <div>
+                  <label>{t("APinpFeature")+ " " + 3}</label>
+                  <input type='text' placeholder={t("APinpFeatureHolder" + " " + 3)} onChange={(e) => setNewProductFeature3(e.target.value)} />
+                  </div>
+                  
+              </div>
 
 
-            <button className='addBtn btn' onClick={() => {
-                addProduct();
-                uploadImage();
-            }}>Add Product</button>
+              <button className='addBtn btn' onClick={() => {
+                  addProduct();
+                  uploadImage();
+              }}>Add Product</button>
 
             </div>
         </div>

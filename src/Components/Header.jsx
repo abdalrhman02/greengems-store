@@ -123,7 +123,7 @@ function Header() {
 
                     <a href="Login" ref={loginBtn}><button className='btn login'>{t('login')}</button></a>
                     <a onClick={logout} ref={signoutBtn}><button className='btn'>Sign Out</button></a>
-                    <button className='btn' onClick={handleAdminRole}>Admin Role</button>
+                    {/* <button className='btn' onClick={handleAdminRole}>Admin Role</button> */}
                 </div>
 
             </div>
